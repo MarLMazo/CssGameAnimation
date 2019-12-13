@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MY GAME CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>  
+  </head>
+  <body>
+    <div tabindex="0" id="skiplink">
+      <p>This is a game Website</p>
+      <a href="#main"> Jump to Main Content </a>
+    </div>
+    <div class="load-wrap">
+      <h2 class="hidden">The Loading Page</h2>
+      <div class="loader"><span></span></div>
+      <div class="load-msg">Loading...</div>
+    </div>
+   
+    <main id="main"> 
+      <button class="btnStart" onclick="startGame()">Start Game</button>
+      <button class="ShowHowToPlay" onclick="howToPlay()">Help</button> 
+      <h1>Help turn the Devil to the right place in heaven</h1>
+      <section class="howToPlay flipOutX hidden">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Help Turning the Devil Monster to Angel by Clicking Them</li>
+          <li>Once Click, they will turn to Angel and go to the Heaven</li>
+          <li>Turn every Devil to Angel before time run out</li>
+          <li>Every human in the village will be thankful to you once you turn all Devil to Angel</li>
+          <li>Now, Please Help us to live in a peaceful village</li>
+        </ul>
+      </section>
+      <aside class="timer">
+        <h2 class="hidden">Timer Area</h2>
+        <span title="The Heart Figure for timer"></span>
+        <span title="The Heart Figure for timer"></span>
+        <span title="The Heart Figure for timer"></span>
+        <span title="The Heart Figure for timer"></span>
+      </aside>
+      
+      <section class="play-area disabled">
+        <h2 class="hidden">The Play Area of the Game</h2>
+        <div class="monster-area">
+          <input type="radio" class='CatBody Cat-a ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-b ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-c ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-d ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-e ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-f ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-g ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-h ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-i ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-j ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-k ' title="Monster Figure"/>
+          <input type="radio" class='CatBody Cat-l ' title="Monster Figure"/>
+        </div>  
+      </section>
+
+      <section class="gameOver">
+        <h2>Game Over</h2>
+        <div class="TryAgain">
+          <p>Play Again?</p>
+          <button class="btnYes" onClick="window.location.reload();"><span>Yes</span></button>
+          <button class="btnNo" onClick="self.close();"><span>No</span></button>
+        </div>
+      </section>  
+    </main>
+
+    <script src="https://kit.fontawesome.com/150aec7788.js" crossorigin="anonymous"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
