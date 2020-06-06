@@ -6,6 +6,8 @@ function startGame(){
   //MyMusic.play();
   //setInterval(MyMusic.play(), 2000);
   //setTimeout(MyMusic.stop(), 20000);
+  var scoreArea = document.getElementById('scoreValue');
+  var score = 0; 
   var playArea = document.querySelector('.play-area');
   var BtnStart = document.querySelector('.btnStart');
   var h1 = document.querySelector('h1');
@@ -25,13 +27,23 @@ function startGame(){
 
   for(let i=0;i<timer.length;i++){
     timer[i].classList.add('timer-start');
+
   }
   
   var CatBody = $('.CatBody');
   for(let i=0;i<CatBody.length;i++){
     
+    CatBody[i].onclick = function() {
+      score++;
+      scoreArea.textContent = score;
+      //console.log(score);
+    }
+
     if(CatBody[i].checked){
       CatBody[i].stop();
+
+      score++;
+      console.log(score);
     }
     else
     {
@@ -39,23 +51,6 @@ function startGame(){
     }
   }
   
-  //animateDiv('.CatBody.Cat-a');
-  // animateDiv('.CatBody.Cat-b');
-  // animateDiv('.CatBody.Cat-c');
-  // animateDiv('.CatBody.Cat-d');
-  // animateDiv('.CatBody.Cat-e');
-  // animateDiv('.CatBody.Cat-f');
-  // animateDiv('.CatBody.Cat-g');
-  // animateDiv('.CatBody.Cat-h');
-  // animateDiv('.CatBody.Cat-i');
-  // animateDiv('.CatBody.Cat-j');
-  // animateDiv('.CatBody.Cat-k');
-  // var CatBody = document.querySelectorAll('input[type="radio"]:checked');
-
-  // for(let i =0; i<CatBody.length; i++){
-  //   CatBody[i] = console.log(CatBody[i].className);
-  // }
-  //animateDiv();
 };
 
 // Get viewport dimensions (remove the dimension of the div)
