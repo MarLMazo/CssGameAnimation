@@ -6,6 +6,7 @@ function startGame(){
   //MyMusic.play();
   //setInterval(MyMusic.play(), 2000);
   //setTimeout(MyMusic.stop(), 20000);
+  //Get all the required elements
   var scoreArea = document.getElementById('scoreValue');
   var score = 0; 
   var playArea = document.querySelector('.play-area');
@@ -29,26 +30,18 @@ function startGame(){
     timer[i].classList.add('timer-start');
 
   }
-  
+  //Loop thru the catbody
   var CatBody = $('.CatBody');
   for(let i=0;i<CatBody.length;i++){
-    
-    CatBody[i].onclick = function() {
+    //Change values and get new score
+    CatBody[i].onchange = function() {
       score++;
       scoreArea.textContent = score;
-      //console.log(score);
-    }
-
-    if(CatBody[i].checked){
-      CatBody[i].stop();
-
-      score++;
       console.log(score);
     }
-    else
-    {
-      animateDiv(CatBody[i]);
-    }
+    //animate the monster
+    animateDiv(CatBody[i]);
+    
   }
   
 };
@@ -59,7 +52,7 @@ function makeNewPosition(){
   
   var h = $(window).height() - (32*8);
   var w = $(window).width() - (32*15);
-  
+  //getting random values for width and height
   var nh = getRandomValues(-h/2,h/2);
   var nw = getRandomValues(-w/2,w/2);
   // console.log([h,w]);
@@ -87,12 +80,8 @@ function animateDiv(myclass){
 
 function howToPlay(){
   var instruc = document.querySelector('.howToPlay'); 
-
+  //toggle class on how to play
   instruc.classList.remove('hidden');
   instruc.classList.toggle('flipOutX');
   instruc.classList.toggle('flipInX');
-  // instruc.classList.toggle('hidden');
-  //var myDiv = $( ".Cat-a" );
-  //myDiv.clearQueue();
-  // myDiv.stop();
 }
